@@ -8,7 +8,9 @@ This project focuses on the segmentation and classification of skin lesions usin
 ### Pre-processing
 - **Cropping**: Images are cropped to remove black borders, ensuring the median skin color is accurately represented.
 - **Hair Removal**: The DullRazor algorithm is used to digitally shave images, reducing noise from hair in the segmentation process.
+
 ![Dice Score Histogram](figure/output5.png)
+
 ![Dice Score Histogram](figure/output6.png)
 
 ### Segmentation
@@ -16,13 +18,16 @@ This project focuses on the segmentation and classification of skin lesions usin
 - **Color Space Transformation**: The image is converted to the LAB color space, and medians for each channel are calculated.
 - **Thresholding**: An adaptive thresholding method is applied, combining Otsu's method and the SWOT method to improve segmentation accuracy.
 - **Connected Components**: An algorithm is used to correct segmentation issues by focusing on labels present in the central region of the image.
+
 ![Dice Score Histogram](figure/output9.png)
+
 ![Dice Score Histogram](figure/output10.png)
 
 ### Post-processing
 - **Morphological Operations**: Filling holes in the mask and inverting the mask if necessary to correct segmentation errors.
 - **Performance Evaluation**: Dice scores are calculated to evaluate segmentation performance, with a median score of 0.77.
 - **Dice Score Histogram**:
+
   ![Dice Score Histogram](figure/dice_histo.png)
 
 ### Feature Extraction
